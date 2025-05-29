@@ -1,4 +1,4 @@
-# Proyek Akhir: Menyelesaikan Permasalahan Jaya Jaya Institut
+# 👨🏻‍🎓 Proyek Akhir: Menyelesaikan Permasalahan Jaya Jaya Institut
 
 ## Business Understanding
 **Jaya Jaya Institut** merupakan salah satu institusi pendidikan perguruan yang telah berdiri sejak tahun 2000. Hingga saat ini ia telah mencetak banyak lulusan dengan reputasi yang sangat baik. 
@@ -28,7 +28,7 @@ Proyek ini bertujuan untuk membantu Jaya Jaya Institut untuk mengatasi masalah t
 
 6. Penyusunan rekomendasi berbasis data untuk strategi mencegah peningkatan jumlah siswa yang dropout.
 
-Output akhir dari proyek ini berupa:
+**Output akhir dari proyek ini berupa**:
 
 - Model prediksi dropout siswa.
 
@@ -36,7 +36,7 @@ Output akhir dari proyek ini berupa:
 
 - Laporan analisis dan rekomendasi strategi yang bisa dilakukkan berdasarkan temuan data.
 
-Batasan dalam proyek ini adalah tidak mempertimbangkan faktor penilaian siswa/wali siswa terhadap kualitas layanan institusi yang dapat memengaruhi keputusan siswa untuk keluar dari Jaya Jaya Institut.
+Batasan dalam proyek ini adalah **tidak mempertimbangkan** faktor penilaian siswa/wali siswa terhadap kualitas layanan institusi yang dapat memengaruhi keputusan siswa untuk keluar dari Jaya Jaya Institut.
 
 
 ### Persiapan
@@ -79,7 +79,7 @@ Terdapat file `app.py` untuk menjalankan sistem Machine Learning yang sudah dibu
 
 Sistem ini dibuat dengan Streamlit. Jika Anda menjalankan file `app.py` maka Anda akan menjalankan sistem ini di perangkat Anda secara lokal (localhost). Berikut ini cara untuk menjalankannya di perangkat Anda:
 
-1. Pastikan Anda sudah mengaktifkan virtual environtment Pythhon seperti pada langkah [persiapan](#persiapan)
+1. Pastikan Anda sudah mengaktifkan *virtual environtment* Pythhon seperti pada langkah [persiapan](#persiapan).
 
 2. Jalankan perintah berikut:
 ```
@@ -90,20 +90,17 @@ streamlit run app.py
 
 4. Untuk menghentikan/menutup sistem, buka terminal yang sebelumnya digunakan untuk menjalankan sistem, kemudian tekan `Ctrl`+`C`.
 
-Sistem ini juga di deploy pada Streamlit Cloud Community, sehingga bisa diakses publik secara daring. Anda bisa mengaksesnya melalui [tautan ini](https://student-dropout-dashboard-jaya2institut.streamlit.app/)
+Sistem ini juga di deploy pada Streamlit Cloud Community, sehingga bisa diakses publik secara daring. Anda bisa mengaksesnya melalui [tautan ini](https://student-dropout-dashboard-jaya2institut.streamlit.app/).
 
 ## Conclusion
 Berdasarkan hasil analisis yang telah dilakukan dapat diidentifikasi bahwa tingkat dropout paling kuat dipengaruhi oleh faktor akademik, ekonomi, dan demografi. Secara rinci dapat dijelaskan sebagai berikut:
 1. **Performa akademik**: 
-
 Siswa dengan performa akademik rendah cenderung berisiko untuk dropout, terutama performa pada semester 2. 
 
 2. **Ekonomi**: 
-
 Siswa yang dropout didominasi oleh siswa yang memilki latar belakang keluarga ekonomi menengah kebawah, karena didominasi oleh siswa yang orang tuanya bekerja sebagai buruh kasar (*Unskilled Worker*). Namun, siswa dengan beasiswa dan merupakan penerima kredit justru tidak mendominasi tingkat dropout. Ini berarti dari segi ekonomi, siswa dropout didominasi oleh ekonomi menengah yang tidak memenuhi syarat untuk mendapatkan beasiswa/kredit namun tidak memiliki kemampuan ekonomi yang kuat untuk melanjutkan pendidikan.
 
 2. **Demografi**: 
-
 Siswa yang dropout didominasi oleh siswa yang memilki latar belakang keluarga ekonomi menengah kebawah dengan tingkat pendidikan orang tua dasar hingga menengah. Selain kondisi ekonomi, siswa yang dropout juga didominasi oleh siswa yang saat mendaftar berumur lebih dari 23 tahun.
 
 Maka kemudian, pertanyaan bisnisnya dapat dijawab:
