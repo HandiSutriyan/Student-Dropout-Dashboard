@@ -1,20 +1,20 @@
 # Proyek Akhir: Menyelesaikan Permasalahan Jaya Jaya Institut
 
 ## Business Understanding
-Jaya Jaya Institut merupakan salah satu institusi pendidikan perguruan yang telah berdiri sejak tahun 2000. Hingga saat ini ia telah mencetak banyak lulusan dengan reputasi yang sangat baik. 
+**Jaya Jaya Institut** merupakan salah satu institusi pendidikan perguruan yang telah berdiri sejak tahun 2000. Hingga saat ini ia telah mencetak banyak lulusan dengan reputasi yang sangat baik. 
 
 ### Permasalahan Bisnis
-Jaya Jaya Institut memiliki masalah pada banyaknya juga siswa yang tidak menyelesaikan pendidikannya alias dropout. Hal ini menjadi salah satu masalah yang besar untuk sebuah institusi pendidikan. 
-Apabila dibiarkan, bisa saja angka dropout ini semakin meningkat dan membuat citra Jaya jaya Institut menjadi buruk di kalangan publik. Oleh karena itu, Jaya Jaya Institut ingin mendeteksi secepat mungkin siswa yang mungkin akan melakukan dropout sehingga dapat diberi bimbingan khusus.
+**Jaya Jaya Institut** memiliki masalah pada banyaknya juga siswa yang tidak menyelesaikan pendidikannya alias dropout. Hal ini menjadi salah satu masalah yang besar untuk sebuah institusi pendidikan. 
+Apabila dibiarkan, bisa saja angka dropout ini semakin meningkat dan membuat citra Jaya jaya Institut menjadi buruk di kalangan publik. Oleh karena itu, **Jaya Jaya Institut** ingin mendeteksi secepat mungkin siswa yang mungkin akan melakukan dropout sehingga dapat diberi bimbingan khusus.
 
 Beberapa pertanyaan bisnis yang perlu dijawab yaitu:
 1. Bagaimana persebaran siswa yang dropout dan tidak?
 2. Bagaimana demografi siswa yang statusnya droput?
 3. Faktor apa saja yang paling memengaruhi siswa untuk dropout?
-4. Apa saja hal yang perlu dilakukan untuk mencegah meningkatnya jumlah siswa yang dropout?
+4. Bagaimana profil akademik siswa yang dropout?
 
 ### Cakupan Proyek
-Proyek ini bertujuan untuk membantu Jaya Jaya Institut untuk mengatasi masalah tinggi jumlah siswa yang Dropout mencapai lebih dari 30%. Pada proyek ini dilakukan serangkaian analisis data untuk membantu Jaya Jaya Institute memahami dan menangani permasalahan tingginya tingkat attrition. Pekerjaan utama dalam proyek ini meliputi:
+Proyek ini bertujuan untuk membantu Jaya Jaya Institut untuk mengatasi masalah tinggi jumlah siswa yang Dropout mencapai lebih dari 30%. Pada proyek ini dilakukan serangkaian analisis data untuk membantu Jaya Jaya Institute memahami dan menangani permasalahan tingginya tingkat dropout. Pekerjaan utama dalam proyek ini meliputi:
 
 1. Eksplorasi dan pembersihan data siswa yang mencakup data demografis, akademik, dan latar belakang keluarga & ekonomi siswa.
 
@@ -90,26 +90,46 @@ streamlit run app.py
 
 4. Untuk menghentikan/menutup sistem, buka terminal yang sebelumnya digunakan untuk menjalankan sistem, kemudian tekan `Ctrl`+`C`.
 
-Sistem ini juga di deploy pada Streamlit Cloud Community, sehingga bisa diakses publik secara daring. Anda bisa mengaksesnya melalui [tautan ini]()
+Sistem ini juga di deploy pada Streamlit Cloud Community, sehingga bisa diakses publik secara daring. Anda bisa mengaksesnya melalui [tautan ini](https://student-dropout-dashboard-jaya2institut.streamlit.app/)
 
 ## Conclusion
 Berdasarkan hasil analisis yang telah dilakukan dapat diidentifikasi bahwa tingkat dropout paling kuat dipengaruhi oleh faktor akademik, ekonomi, dan demografi. Secara rinci dapat dijelaskan sebagai berikut:
-1. Performa akademik: Siswa dengan performa akademik rendah cenderung berisiko untuk dropout, terutama performa pada semester 2. 
-2. Ekonomi: Siswa yang dropout didominasi oleh siswa yang memilki latar belakang keluarga ekonomi menengah kebawah, karena didominasi oleh siswa yang orang tuanya bekerja sebagai buruh kasar (*Unskilled Worker*). Namun, siswa dengan beasiswa dan merupakan penerima kredit justru tidak mendominasi tingkat dropout. Ini berarti dari segi ekonomi, siswa dropout didominasi oleh ekonomi menengah yang tidak memenuhi syarat untuk mendapatkan beasiswa/kredit namun tidak memiliki kemampuan ekonomi yang kuat untuk melanjutkan pendidikan.
-2. Demografi: Siswa yang dropout didominasi oleh siswa yang memilki latar belakang keluarga ekonomi menengah kebawah dengan tingkat pendidikan orang tua dasar hingga menengah. Selain kondisi ekonomi, siswa yang dropout juga didominasi oleh siswa yang saat mendaftar berumur lebih dari 23 tahun.
+1. **Performa akademik**: 
 
-Maka, pertanyaan bisnis dapat dijawab:
-1. Bagaimana persebaran siswa yang dropout dan tidak?
+Siswa dengan performa akademik rendah cenderung berisiko untuk dropout, terutama performa pada semester 2. 
+
+2. **Ekonomi**: 
+
+Siswa yang dropout didominasi oleh siswa yang memilki latar belakang keluarga ekonomi menengah kebawah, karena didominasi oleh siswa yang orang tuanya bekerja sebagai buruh kasar (*Unskilled Worker*). Namun, siswa dengan beasiswa dan merupakan penerima kredit justru tidak mendominasi tingkat dropout. Ini berarti dari segi ekonomi, siswa dropout didominasi oleh ekonomi menengah yang tidak memenuhi syarat untuk mendapatkan beasiswa/kredit namun tidak memiliki kemampuan ekonomi yang kuat untuk melanjutkan pendidikan.
+
+2. **Demografi**: 
+
+Siswa yang dropout didominasi oleh siswa yang memilki latar belakang keluarga ekonomi menengah kebawah dengan tingkat pendidikan orang tua dasar hingga menengah. Selain kondisi ekonomi, siswa yang dropout juga didominasi oleh siswa yang saat mendaftar berumur lebih dari 23 tahun.
+
+Maka kemudian, pertanyaan bisnisnya dapat dijawab:
+
+1. **Bagaimana persebaran siswa yang dropout dan tidak?**
 
     - Siswa yang dropout berjumlah 1421 siswa (32.1%), siswa yang sudah lulus berjumlah 2209 siswa (49,9%), dan sisanya masih menempuh pendidikan dengan jumlah 794 siswa (17.9%).
 
-2. Faktor apa saja yang paling memengaruhi siswa untuk dropout?
+2. **Faktor apa saja yang paling memengaruhi siswa untuk dropout?**
 
-    - Berdasarkan analisis model dengan pembelajaran mesin, terdapat 10 faktor utama yang paling memengaruhi tingkat dropout yaitu: `Curricular_units_2nd_sem_approved` (13%), `Curricular_units_2nd_sem_grade` (8.6%), `Curricular_units_1st_sem_approved` (8.4%), `Curricular_units_1st_sem_grade` (5.6%), `Curricular_units_2nd_sem_evaluations` (5.3%)`Curricular_units_1st_sem_evaluations` (4%), `Tuition_fees_up_to_date`(4%),`Age_at_enrollment` (3.8%), `Admission_grade` (3.5%), `Previous_qualification_grade` (3.4%)
+    - Berdasarkan analisis model dengan pembelajaran mesin, terdapat 10 faktor utama yang paling memengaruhi tingkat dropout yaitu: 
+        - `Curricular_units_2nd_sem_approved`: 0.285729
+        - `Tuition_fees_up_to_date`: 0.120368
+        - `Curricular_units_1st_sem_enrolled`: 0.062965
+        - `Scholarship_holder`: 0.042554
+        - `Curricular_units_2nd_sem_grade`: 0.038359
+        - `Curricular_units_1st_sem_approved`: 0.037573
+        - `Age_at_enrollment`: 0.036161
+        - `Debtor`: 0.026249
+        - `Curricular_units_2nd_sem_credited`: 0.025350
+        - `Curricular_units_2nd_sem_without_evaluations`: 0.025155
 
     - Berdasarkan analisi korelasi terhadap fitur numerik, terdapat 5 faktor utama yang memiliki nilai korelasi kuat lebih dari 0.2. Empat faktor memiliki korelasi positif terhadap tingkat dropout siswa, yang berarti semain kecil nilainya semaikin meningkatkan risiko siswa tersebut dropout yaitu : `Curricular_units_2nd_sem_approved`, `Curricular_units_2nd_sem_grade`,`Curricular_units_1st_sem_approved`, dan `Curricular_units_1st_sem_grade`. Sedangkan ada satu fitur yang memiliki nilai korelasi negatif yang cukup tinggi yaitu `Age_at_enrollment` yang berarti semakin tua usia siswa saat mendaftar, maka akan semakin tinggi risiko untuk dropout.
 
-3. Bagaimana profil siswa yang statusnya dropout?
+3. **Bagaimana profil siswa yang statusnya dropout?**
+
     - Berdasarkan analisis yang telah dilakukan, siswa yang berstatus dropout didominasi oleh siswa dengan:
         - Latar belakang pendidikan terakhir orang tua di level dasar hingga menengah (pendidikan 6-12 tahun)
         - Latar belakang pekerjaan orang tua yang merupakan pekerja kasar (*unskilled worker*)
@@ -117,25 +137,34 @@ Maka, pertanyaan bisnis dapat dijawab:
         - Berumur lebih dari 23 tahun saat mendaftar
         - Memiliki performa akademik yang kurang baik terutama pada semester 2.
 
-4. Bagaimana profil akademik siswa yang dropout?
+4. **Bagaimana profil akademik siswa yang dropout?**
 
     - Secara akademik, siswa dropout didominasi oleh siswa yang memilki nilai akhir semester yang rendah dan jumlah mata kuliah yang dapat diluluskan cukup rendah dibandingkan dengan siswa yang lulus baik di semester 1 dan 2.
 
 ### Rekomendasi Action Items
 Berikut ini beberapa rekomendasi aksi perbaikan dan evaluasi yang dapat dilakukan Jaya Jaya Institut:
 
-1. Tinjau kembali persyaratan insentif beasiswa dan kredit
+1. **Tinjau kembali persyaratan insentif beasiswa dan kredit**
+
     - Perlu dibuatkan insentif dengan persyaratan yang lebih luas yang menyasar siswa dengan latar belakang keluarga dan ekonomi menengah.
     - Dapat dikembangkan insentif khusus untuk siswa ekonomi menengah selain beasiswa dan kredit, seperti keringanan biaya parsial dan relatif sesuai dengan tingkat pendapatan orang tua.
-2. Berikan pendampingan akademik dan psikologi
+
+2. **Berikan pendampingan akademik dan psikologi**
+
     - Berikan pendampingan akademik pada siswa yang memilki performa kurang secara berkala, bisa diadakan evaluasi setiap pertengahan semester dan akhir semester agar dapat dimitigasi secara dini indikasi kendalan akademik dan psikis yang akan memengaruhi hasil evaluasi akademik siswa.
     - Berikan layanan pendampingan khusus untuk siswa di atas 23 tahun, fakta bahwa siswa dropout didominasi oleh siswa yang mendaftar di atas 23 tahun dan performa akademiknya juga kurang, menunjukkan bahwa siswa dengan rentang usia ini juga perlu bimbingan yang lebih intensif.
-3. Tinjau kembali jalur pendaftaran siswa di atas 23 tahun
+
+3. **Tinjau kembali jalur pendaftaran siswa di atas 23 tahun**
+
     - Pertimbangkan untuk meninjau kembali jumlah siswa yang diterima dari jalur ini jika ingin mengurangi jumlah siswa dropout, karena jalur ini mendominasi siswa yang dropout
     - Pastikan berikan fasilitas pendampingan khusus untuk siswa dengan golongan ini agar performa akademiknya dapat terjaga dengan baik.
-4. Evaluasi kurikulum dan sistem pembelajaran
+
+4. **Evaluasi kurikulum dan sistem pembelajaran**
+
     - Lakukan asesmen pada kurikulum dan sistem pembelajaran terutama pada semester 2, karena secara keseluruhan, performa akademik menurun pada semester 2.
     - Sesuaikan metode pembelajaran/kurikulum yang lebih inklusif untuk semua usia terutama usia di atas 23 tahun dengan berbagai latar belakang yang mengikutinya agar materi lebih mudah diterima dan dapat meningkatkan perfroma akademik mereka.
-5. Lakukan survey kepuasan siswa
+
+5. **Lakukan survey kepuasan siswa**
+
     - Lakukan survey untuk memperluas wawasan tidak hanya dari sisi institusi tapi juga penilaian dari sisi siswa agar analisis lebih objektif dan dapat melihat masalah yang mungkin juga bisa datang dari sisi intitusi
     - Lakukan survey tambahan untuk siswa dengan usia di atas 23 tahun untuk menggali kebutuhan mereka terhadap fasilitas dan metode belajar institusi untuk dapat menangggulangi angka dropout yang tinggi dari golongan ini.

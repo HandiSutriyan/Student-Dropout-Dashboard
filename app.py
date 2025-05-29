@@ -94,7 +94,7 @@ input_data = {
 input_df = pd.DataFrame([input_data])
 
 st.divider()
-if st.button("✨ ***JALANKAN PREDIKSI SEKARANG***"):
+if st.button("✨ **JALANKAN PREDIKSI SEKARANG**"):
         
     dropout_predict = MODEL.predict(input_df)[0]
     dropout_prob = MODEL.predict_proba(input_df)[0][1]
