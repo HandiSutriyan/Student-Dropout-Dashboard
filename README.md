@@ -120,7 +120,9 @@ Berikut ini beberapa rekomendasi aksi perbaikan dan evaluasi yang dapat dilakuka
 3. Tinjau kembali jalur pendaftaran siswa di atas 23 tahun
     - Pertimbangkan untuk meninjau kembali jumlah siswa yang diterima dari jalur ini jika ingin mengurangi jumlah siswa dropout, karena jalur ini mendominasi siswa yang dropout
     - Pastikan berikan fasilitas pendampingan khusus untuk siswa dengan golongan ini agar performa akademiknya dapat terjaga dengan baik.
+4. Evaluasi kurikulum dan sistem pembelajaran
+    - Lakukan asesmen pada kurikulum dan sistem pembelajaran terutama pada semester 2, karena secara keseluruhan, performa akademik menurun pada semester 2.
     - Sesuaikan metode pembelajaran/kurikulum yang lebih inklusif untuk semua usia terutama usia di atas 23 tahun dengan berbagai latar belakang yang mengikutinya agar materi lebih mudah diterima dan dapat meningkatkan perfroma akademik mereka.
-4. Lakukan survey kepuasan siswa
+5. Lakukan survey kepuasan siswa
     - Lakukan survey untuk memperluas wawasan tidak hanya dari sisi institusi tapi juga penilaian dari sisi siswa agar analisis lebih objektif dan dapat melihat masalah yang mungkin juga bisa datang dari sisi intitusi
     - Lakukan survey tambahan untuk siswa dengan usia di atas 23 tahun untuk menggali kebutuhan mereka terhadap fasilitas dan metode belajar institusi untuk dapat menangggulangi angka dropout yang tinggi dari golongan ini.
