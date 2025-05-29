@@ -70,14 +70,27 @@ pip install -r requirements.txt
 ```
 
 ## Business Dashboard
-Jelaskan tentang business dashboard yang telah dibuat. Jika ada, sertakan juga link untuk mengakses dashboard tersebut.
+Untuk memberikan gambaran hasil analisis yang telah dilakukan, terdapat dashboard visualisasi faktor-faktor terkait yang dapat diamati untuk mengatassi masalah *Dropout Rate* Jaya Jaya Institut. Dashboard visualisasi data dibuat dengan Google Looker Studio yang dapat diakses melalui [tautan ini](https://lookerstudio.google.com/reporting/f922294b-6255-4195-a572-889fecf4aba2/page/DmEMF)
+
+
 
 ## Menjalankan Sistem Machine Learning
-Jelaskan cara menjalankan protoype sistem machine learning yang telah dibuat. Selain itu, sertakan juga link untuk mengakses prototype tersebut.
+Terdapat file `app.py` untuk menjalankan sistem Machine Learning yang sudah dibuat. Dengan sistem ini Anda bisa melakukan prediksi apakah seseorang berpotensi dropout atau tidak berdasarkan parameter-parameter yang diinputkan melalui form yang tersedia.
 
+Sistem ini dibuat dengan Streamlit. Jika Anda menjalankan file `app.py` maka Anda akan menjalankan sistem ini di perangkat Anda secara lokal (localhost). Berikut ini cara untuk menjalankannya di perangkat Anda:
+
+1. Pastikan Anda sudah mengaktifkan virtual environtment Pythhon seperti pada langkah [persiapan](#persiapan)
+
+2. Jalankan perintah berikut:
+```
+streamlit run app.py
 ```
 
-```
+3. Jika berhasil, sistem akan langsung membuka jendela baru para peramban Anda dan menampilkan anatarmuka dari sistem. Atau Anda juga bisa mengakses melaui tautan yang tampil pada terminal/command promt saat perintah di atas berhasil dijalankan.
+
+4. Untuk menghentikan/menutup sistem, buka terminal yang sebelumnya digunakan untuk menjalankan sistem, kemudian tekan `Ctrl`+`C`.
+
+Sistem ini juga di deploy pada Streamlit Cloud Community, sehingga bisa diakses publik secara daring. Anda bisa mengaksesnya melalui [tautan ini]()
 
 ## Conclusion
 Berdasarkan hasil analisis yang telah dilakukan dapat diidentifikasi bahwa tingkat dropout paling kuat dipengaruhi oleh faktor akademik, ekonomi, dan demografi. Secara rinci dapat dijelaskan sebagai berikut:

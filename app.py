@@ -27,29 +27,31 @@ st.title("🧮 Prediksi Dropout Jaya Jaya Institut")
 st.markdown("""Masukkan data-data siswa yang diminta pada form di bawah ini untuk melakukan prediksi potensi dropoutnya""")
 
 st.divider()
-st.subheader("👤 Biodata Siswa")
-name = st.text_input("Nama Siswa")
-gender = st.radio("Jenis Kelamin", list(GENDER.keys()), key='Gender')
-course = st.selectbox("Kelas yang diikuti", list(COURSE_LIST.values()))
+col1, col2 = st.columns(2)
+col1.subheader("👤 Biodata Siswa")
+name = col1.text_input("Nama Siswa")
+gender = col1.radio("Jenis Kelamin", list(GENDER.keys()), key='Gender')
+course = col1.selectbox("Kelas yang diikuti", list(COURSE_LIST.values()))
 if course == '- Pilih Kelas -':
-    st.error('Pilih Kelas terlebih dahulu')
+    col1.error('Pilih Kelas terlebih dahulu')
 course_id = [key for key, value in COURSE_LIST.items() if value == course][0]
-age = st.number_input("Usia saat mendaftar", key='Age_at_enrollment', min_value=0, max_value=100, step=1, format='%d')
+age = col1.number_input("Usia saat mendaftar", key='Age_at_enrollment', min_value=5, max_value=100, step=1, format='%d')
 
-st.subheader("💵 Finansial Siswa")
-tuition = st.radio("Apakah siswa sudah melunasi biaya pendidikan terakhir?", list(BOOL.keys()), key='Tuition_fees_up_to_date')
-scholarship = st.radio("Apakah siswa merupakan penerima beasiswa?", list(BOOL.keys()), key='Scholarship_holder')
-debtor = st.radio("Apakah siswa merupakan debitur (penerima kredit)?", list(BOOL.keys()),key='Debtor')
+col2.subheader("💵 Finansial Siswa")
+tuition = col2.radio("Apakah siswa sudah melunasi biaya pendidikan terakhir?", list(BOOL.keys()), key='Tuition_fees_up_to_date')
+scholarship = col2.radio("Apakah siswa merupakan penerima beasiswa?", list(BOOL.keys()), key='Scholarship_holder')
+debtor = col2.radio("Apakah siswa merupakan debitur (penerima kredit)?", list(BOOL.keys()),key='Debtor')
 
-st.subheader("🎓 Akademik Semester II")
-Curricular_units_2nd_sem_approved = st.number_input("Jumlah Mata Kuliah yang lulus", key = 'Curricular_units_2nd_sem_approved', min_value=0, max_value=100, step=1, format='%d')
-Curricular_units_2nd_sem_credited = st.number_input("Jumlah Mata kuliah yang diikuti", key='Curricular_units_2nd_sem_credited', min_value=0, max_value=100, step=1, format='%d')               
-Curricular_units_2nd_sem_without_evaluations = st.number_input("Jumlah mata kuliah yang tidak dievaluasi", key='Curricular_units_2nd_sem_without_evaluations', min_value=0, max_value=100, step=1, format='%d')
-Curricular_units_2nd_sem_grade = st.number_input("Nilai akhir", key='Curricular_units_2nd_sem_grade')
+col3,col4 = st.columns(2)
+col3.subheader("🎓 Akademik Semester II")
+Curricular_units_2nd_sem_approved = col3.number_input("Jumlah Mata Kuliah yang lulus", key = 'Curricular_units_2nd_sem_approved', min_value=0, max_value=100, step=1, format='%d')
+Curricular_units_2nd_sem_credited = col3.number_input("Jumlah Mata kuliah yang diikuti", key='Curricular_units_2nd_sem_credited', min_value=0, max_value=100, step=1, format='%d')               
+Curricular_units_2nd_sem_without_evaluations = col3.number_input("Jumlah mata kuliah yang tidak dievaluasi", key='Curricular_units_2nd_sem_without_evaluations', min_value=0, max_value=100, step=1, format='%d')
+Curricular_units_2nd_sem_grade = col3.number_input("Nilai akhir", key='Curricular_units_2nd_sem_grade')
 
-st.subheader("🎓 Akademik Semester I")
-Curricular_units_1st_sem_enrolled = st.number_input('Jumlah mata kuliah yang diregistrasi',key='Curricular_units_1st_sem_enrolled', min_value=0, max_value=100, step=1, format='%d')                
-Curricular_units_1st_sem_approved = st.number_input("Jumlah Mata Kuliah yang lulus",key='Curricular_units_1st_sem_approved', min_value=0, max_value=100, step=1, format='%d')
+col4.subheader("🎓 Akademik Semester I")
+Curricular_units_1st_sem_enrolled = col4.number_input('Jumlah mata kuliah yang diregistrasi',key='Curricular_units_1st_sem_enrolled', min_value=0, max_value=100, step=1, format='%d')                
+Curricular_units_1st_sem_approved = col4.number_input("Jumlah Mata Kuliah yang lulus",key='Curricular_units_1st_sem_approved', min_value=0, max_value=100, step=1, format='%d')
 
 input_data = {
     '﻿Marital_status': 1, 
@@ -89,16 +91,18 @@ input_data = {
     'Inflation_rate': 1.2, 
     'GDP': 0.0019
 }
-
 input_df = pd.DataFrame([input_data])
-dropout_predict = MODEL.predict(input_df)[0]
-dropout_prob = MODEL.predict_proba(input_df)[0][1]
-risk_level = categorize_risk(dropout_prob,0.6,0.2084) 
 
 st.divider()
-st.markdown("""## 🧠 Hasil Prediksi""")
-st.write(f"Nama: {name} | Kelas: {course} | Usia saat mendaftar: {int(age)}")
-col1, col2, col3 = st.columns(3)
-col1.metric("Diprediksi Dropout?", [key for key, value in BOOL.items() if value == bool(dropout_predict)][0])
-col2.metric("Probabilitas",f'{dropout_prob:.2f}')
-col3.metric("Tingkat Risiko", risk_level)
+if st.button("✨ ***JALANKAN PREDIKSI SEKARANG***"):
+        
+    dropout_predict = MODEL.predict(input_df)[0]
+    dropout_prob = MODEL.predict_proba(input_df)[0][1]
+    risk_level = categorize_risk(dropout_prob,0.6,0.2084) 
+
+    st.markdown("""## 🧠 Hasil Prediksi""")
+    st.write(f"Nama: {name} | Kelas: {course} | Usia saat mendaftar: {int(age)}")
+    col1, col2, col3 = st.columns(3)
+    col1.metric("Diprediksi Dropout?", [key for key, value in BOOL.items() if value == bool(dropout_predict)][0])
+    col2.metric("Probabilitas",f'{dropout_prob:.2f}')
+    col3.metric("Tingkat Risiko", risk_level)
