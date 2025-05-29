@@ -70,7 +70,22 @@ pip install -r requirements.txt
 ```
 
 ## Business Dashboard
-Untuk memberikan gambaran hasil analisis yang telah dilakukan, terdapat dashboard visualisasi faktor-faktor terkait yang dapat diamati untuk mengatassi masalah *Dropout Rate* Jaya Jaya Institut. Dashboard visualisasi data dibuat dengan Google Looker Studio yang dapat diakses melalui [tautan ini](https://lookerstudio.google.com/reporting/f922294b-6255-4195-a572-889fecf4aba2/page/DmEMF)
+Untuk memberikan gambaran hasil analisis yang telah dilakukan, terdapat dashboard visualisasi faktor-faktor terkait yang dapat diamati untuk mengatassi masalah *Dropout Rate* Jaya Jaya Institut. Dashboard visualisasi data dibuat dengan Google Looker Studio yang dapat diakses melalui [tautan ini](https://lookerstudio.google.com/reporting/f922294b-6255-4195-a572-889fecf4aba2/page/DmEMF).
+
+Pada dashboard ini terdapat fitur filter interaktif yang bisa membantu melihat visualisasi data berdasarkan Status Siswa, Prediksi Dropout, dan Level Risiko Dropout. Fitur ini terdapat di bagian kanan atas header dashboard.
+
+Selain itu, terdapat dua kelompok visualisasi utama yaitu: 
+1. Statistik Siswa 
+
+Pada bagian ini diperlihatkan proporsi sebaran status siswa secara keseluruhan, berdasarkan kelas yang diikuti, dan berdasarkan pelunasan terakhir biaya pendidikan.
+
+2. Prediksi Dropout Siswa
+
+Di bagian ini diperlihatkan statistik hasil prediksi dropout pada siswa yang aktif (berstatus *Enroll*), sehingga dapat dimonitor seberapa banyak siswa aktif yang diprediksi berisiko dropout beserta tingkat risikonya.
+
+3. Tabel data
+
+Pada tabel data, ditampilkan secara detail rincian data dari siswa-siswa yang diprediksi dropout secara keseluruhan. Tabel ini juga akan mengikuti fitur filter interaktif yang berada di header dashboard. 
 
 
 
