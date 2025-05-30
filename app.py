@@ -43,15 +43,17 @@ scholarship = col2.radio("Apakah siswa merupakan penerima beasiswa?", list(BOOL.
 debtor = col2.radio("Apakah siswa merupakan debitur (penerima kredit)?", list(BOOL.keys()),key='Debtor')
 
 col3,col4 = st.columns(2)
-col3.subheader("🎓 Akademik Semester II")
-Curricular_units_2nd_sem_approved = col3.number_input("Jumlah Mata Kuliah yang lulus", key = 'Curricular_units_2nd_sem_approved', min_value=0, max_value=100, step=1, format='%d')
-Curricular_units_2nd_sem_credited = col3.number_input("Jumlah Mata kuliah yang diikuti", key='Curricular_units_2nd_sem_credited', min_value=0, max_value=100, step=1, format='%d')               
-Curricular_units_2nd_sem_without_evaluations = col3.number_input("Jumlah mata kuliah yang tidak dievaluasi", key='Curricular_units_2nd_sem_without_evaluations', min_value=0, max_value=100, step=1, format='%d')
-Curricular_units_2nd_sem_grade = col3.number_input("Nilai akhir", key='Curricular_units_2nd_sem_grade')
 
-col4.subheader("🎓 Akademik Semester I")
-Curricular_units_1st_sem_enrolled = col4.number_input('Jumlah mata kuliah yang diregistrasi',key='Curricular_units_1st_sem_enrolled', min_value=0, max_value=100, step=1, format='%d')                
-Curricular_units_1st_sem_approved = col4.number_input("Jumlah Mata Kuliah yang lulus",key='Curricular_units_1st_sem_approved', min_value=0, max_value=100, step=1, format='%d')
+
+col3.subheader("🎓 Akademik Semester I")
+Curricular_units_1st_sem_enrolled = col3.number_input('Jumlah mata kuliah yang diregistrasi',key='Curricular_units_1st_sem_enrolled', min_value=0, max_value=100, step=1, format='%d')                
+Curricular_units_1st_sem_approved = col3.number_input("Jumlah Mata Kuliah yang lulus",key='Curricular_units_1st_sem_approved', min_value=0, max_value=100, step=1, format='%d')
+
+col4.subheader("🎓 Akademik Semester II")
+Curricular_units_2nd_sem_approved = col4.number_input("Jumlah Mata Kuliah yang lulus", key = 'Curricular_units_2nd_sem_approved', min_value=0, max_value=100, step=1, format='%d')
+Curricular_units_2nd_sem_credited = col4.number_input("Jumlah Mata kuliah yang diikuti", key='Curricular_units_2nd_sem_credited', min_value=0, max_value=100, step=1, format='%d')               
+Curricular_units_2nd_sem_without_evaluations = col4.number_input("Jumlah mata kuliah yang tidak dievaluasi", key='Curricular_units_2nd_sem_without_evaluations', min_value=0, max_value=100, step=1, format='%d')
+Curricular_units_2nd_sem_grade = col4.number_input("Nilai akhir", key='Curricular_units_2nd_sem_grade')
 
 input_data = {
     '﻿Marital_status': 1, 
